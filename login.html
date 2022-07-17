@@ -17,7 +17,7 @@
 
   <link href="css/style.css" rel="stylesheet" />
 
-  <title>Link - Contato</title>
+  <title>Link - Login</title>
 
 </head>
 
@@ -32,11 +32,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <div class="navbar-nav fw-bold mx-auto py-0" style="font-size: 1rem;">
-          <a href="index.html" class="nav-item nav-link">HOME</a>
+          <a href="index.html" class="nav-item nav-link active">HOME</a>
           <a href="escolhaCadastro.html" class="nav-item nav-link">PARTICIPAR</a>
           <a href="request.html" class="nav-item nav-link">REQUESTS</a>
           <a href="about.html" class="nav-item nav-link">O PROJETO</a>
-          <a href="contact.html" class="nav-item nav-link active">CONTATO</a>
+          <a href="contact.html" class="nav-item nav-link">CONTATO</a>
         </div>
         <a href="./login.html" class="btn btn-primary px-4">LOGIN</a>
         <a href="./escolhaCadastro.html" class="btn btn-primary px-4 mx-1">CADASTRE-SE</a>
@@ -44,79 +44,83 @@
     </nav>
   </div>
   <!-- Navbar End -->
+  <main>
+    <!--Form login-->
+    <section class=" p-4">
+      <div class="bg-white border rounded-5 shadow-lg pb-4 ">
+        <div class="text-center"><img src="img/LINK.png" alt="" style="width: 10rem; padding: 1.5rem; "></div>
+        <section class="w-100 p-4 d-flex justify-content-center pb-4">
+          <form style="width: 22rem;" action="./index.html">
 
-  <!-- Apoio Start -->
-  <div class="container-fluid py-5">
-    <div class="container">
-      <div class="row align-items-start">
-        <div class="col-lg-5 mb-5 mb-lg-0">
-          <p class="section-title" style="padding-right: 50px;">
-            <span style="padding-right: 10px;">Fale conosco</span>
-          </p>
-          <h1 class="mb-4">Faça parte do projeto você também</h1>
-          <p>
-            Invidunt lorem justo sanctus clita. Erat lorem labore ea, justo
-            dolor lorem ipsum ut sed eos, ipsum et dolor kasd sit ea justo.
-            Erat justo sed sed diam. Ea et erat ut sed diam sea ipsum est
-            dolor
-          </p>
+            <!-- Email input -->
+            <div class="form-outline mb-4">
+              <input type="email" id="form2Example1" class="form-control" placeholder="@email">
+              <label class="form-label" for="form2Example1" style="margin-left: 0px;">Login</label>
+              <div class="form-notch">
+                <div class="form-notch-leading" style="width: 9px;"></div>
+                <div class="form-notch-middle" style="width: 88.8px;"></div>
+                <div class="form-notch-trailing"></div>
+              </div>
+            </div>
 
-          <div class="d-flex">
-            <h4 class="fa fa-map-marker-alt text-primary me-3"></h4>
-            <div class="pl-3">
-              <h5>Endereço</h5>
-              <p>123 Street, New York, USA</p>
+            <!-- Password input -->
+            <div class="form-outline mb-4">
+              <input type="password" id="form2Example2" class="form-control" placeholder="Senha">
+              <label class="form-label" for="form2Example2" style="margin-left: 0px;">Senha</label>
+              <div class="form-notch">
+                <div class="form-notch-leading" style="width: 9px;"></div>
+                <div class="form-notch-middle" style="width: 64px;"></div>
+                <div class="form-notch-trailing"></div>
+              </div>
             </div>
-          </div>
-          <div class="d-flex">
-            <h4 class="fa fa-envelope text-primary me-3"></h4>
-            <div class="pl-3">
-              <h5>Email</h5>
-              <p>info@example.com</p>
+
+            <!-- 2 column grid layout for inline styling -->
+            <div class="row mb-4">
+              <div class="col d-flex justify-content-center">
+                <!-- Checkbox -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="form2Example31" checked="">
+                  <label class="form-check-label" for="form2Example31"> Lembrar-me </label>
+                </div>
+              </div>
+
+              <div class="col">
+                <!-- Simple link -->
+                <a href="#!">Esqueceu sua senha?</a>
+              </div>
             </div>
-          </div>
-          <div class="d-flex">
-            <h4 class="fa fa-phone-alt text-primary me-3"></h4>
-            <div class="pl-3">
-              <h5>Telefone</h5>
-              <p>+012 345 67890</p>
+
+            <!-- Submit button -->
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary btn-block mb-4">Login</button>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-7">
-          <div class="card border-0">
-            <div class="card-header bg-secondary text-center p-4">
-              <h1 class="text-white m-0">Dúvidas</h1>
+
+            <!-- Register buttons -->
+            <div class="text-center">
+              <p>Não é cadastrado? <a href="./escolhaCadastro.html">Cadastre-se</a></p>
+              <p>Siga-nos:</p>
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-facebook-f"></i>
+              </button>
+
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-google"></i>
+              </button>
+
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-twitter"></i>
+              </button>
+
+              <button type="button" class="btn btn-link btn-floating mx-1">
+                <i class="fab fa-instagram"></i>
+              </button>
             </div>
-            <div class="card-body rounded-bottom bg-primary p-5">
-              <form>
-                <div class="form-group">
-                  <input type="text" class="form-control border-0 p-3" placeholder="Nome" required="required" />
-                </div>
-                <div class="form-group">
-                  <input type="email" class="form-control border-0 p-3" placeholder="Email" required="required" />
-                </div>
-                <div class="form-group">
-                  <input type="text" class="form-control border-0 p-3" placeholder="Assunto" required="required" />
-                </div>
-                <div class="form-group">
-                  <div class="input-group">
-                    <textarea class="form-control" aria-label="With textarea" placeholder="Mensagem"></textarea>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <button class="btn btn-secondary btn-block border-0 py-2 px-5 mt-2" type="submit">
-                    Enviar
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
+          </form>
+        </section>
       </div>
-    </div>
-  </div>
-  <!-- Apoio End -->
+    </section>
+    <!--Form end-->
+  </main>
 
   <!-- Footer Start -->
   <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
