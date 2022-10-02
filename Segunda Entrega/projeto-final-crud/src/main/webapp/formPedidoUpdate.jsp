@@ -48,78 +48,46 @@
                 </nav>
             </div>
             <!-- Navbar End -->
-            <main class="container">
-                <section>
-                    <h2 id="titleForm">Deixe seu pedido (REQUEST)</h2>
-                    <div class="linha"></div>
-                    <form class="row g-3" action="PedidoCreateAndFind" method="post">
-                        <div class="mb-3">
-                            <label for="input" class="form-label">CPF de usuário</label>
-                            <input type="text" name="cpf" maxlength="11" class="form-control" id="input"
-                                placeholder="CPF de usuário cadastrado">
-                        </div>
-                        <div class="mb-3">
-                            <label for="input" class="form-label">Seu nome</label>
-                            <input type="text" name="nome" class="form-control" id="input"
-                                placeholder="Seu nome">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlInput1" class="form-label">Equipamento a solicitar:</label>
-                            <input type="text" name="equip" class="form-control" id="exampleFormControlInput1"
-                                placeholder="Notebook, Tablet..">
-                        </div>
-                        <div class="mb-3">
-                            <label for="exampleFormControlTextarea1" class="form-label">Escreva seu relato:</label>
-                            <textarea class="form-control" name="relato" placeholder="máximo de 400 caractéres" id="exampleFormControlTextarea1"
-                                rows="3"></textarea>
-                            <br>
-                            <button class="btn btn-primary" type="submit">Enviar</button>
-                        </div>
-                        <section class="container">
-                            <h2 id="titleForm">Pedidos (REQUESTS)</h2>
-                            <div class="linha"></div>
-                        </section>
-                    </form>
-                </section>
 
-                <div class="container-fluid text-white px-3">
-                    <div class="row w-100">
-                        <div class="table-responsive">
-                            <table class="table table-image">
-                                <thead>
-                                    <tr>
-                                        <th style="visibility: hidden;">UserPicture</th>
-                                        <th>Nome</th>
-                                        <th>Relato</th>
-                                        <th>Equipamento</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <c:forEach items="${pedidos}" var="pedido">
-                                        <tr>
-                                            <td style="vertical-align: middle;"><img style="width:10rem;"
-                                                    src="img request/user.png" /></td>
-                                            <td style="vertical-align: middle; font-weight: bold;">${pedido.nome}</td>
-                                            <td style="vertical-align: middle; overflow: hidden; max-width: 200px; word-wrap: break-word;">${pedido.relato}</td>
-                                            <td style="vertical-align: middle;">${pedido.equip}</td>
-                                            <td style="vertical-align: middle;">
-                                                <div>
-                                                <a href="PedidoDelete?pedidoId=${pedido.id}">Deletar</a>
-                                                <a href="PedidoUpdate?pedidoId=${pedido.id}">Editar</a>
-                                                <a href="#">Ajudar</a>
-                                                </div>
-                                            </td>
-                                        </tr>
-                                    </c:forEach>
-                                </tbody>
-                            </table>
-                        </div>
-                        
-                        <h5 class="mt-2"><a href="index.html">Voltar para página principal</a></h5>
+            <div class="container-fluid text-white px-3" style="padding: 56px 0 56px 0;">
+                <div class="row w-100 justify-content-center">
+                    <div style="width:70%;">
+                        <hr>
+                        <h3 class="text-black">Editar Request</h3>
+                        <hr>
+                        <form action="PedidoUpdate" method="POST">
+                            <input value="${pedido.id}" name="id" type="number" style="visibility:hidden">
+                            <div class="form-floating mb-3">
+                                <input value="${pedido.nome}" name="nome" maxlength="40" type="text"
+                                    class="form-control" id="floatingInput1">
+                                <label>Nome</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input value="${pedido.cpf}" name="cpf" maxlength="11" type="text" class="form-control">
+                                <label>CPF</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input value="${pedido.equip}" name="equip" type="text" class="form-control"
+                                    placeholder="Equipamento">
+                                <label>Equipamento</label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <label for="exampleFormControlTextarea1" class="form-label">Relato</label>
+                                <textarea class="form-control" name="relato" value="{pedido.relato}"
+                                    placeholder="máximo de 400 caractéres" id="exampleFormControlTextarea1"
+                                    rows="3"></textarea>
+                            </div>
+
+                            <button class="btn btn-success" type="submit">Editar
+                                Dados</button>
+                            <button class="btn btn-secondary" type="reset">Limpar
+                                Formulário</button>
+                        </form>
+                        <br>
                     </div>
                 </div>
+            </div>
 
-            </main>
             <!-- Footer Start -->
             <div class="container-fluid bg-secondary text-white mt-5 py-5 px-sm-3 px-md-5">
                 <div class="row justify-content-between">

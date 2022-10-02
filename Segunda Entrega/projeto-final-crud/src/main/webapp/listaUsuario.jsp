@@ -31,12 +31,12 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <div class="navbar-nav fw-bold mx-auto py-0" style="font-size: 1rem;">
-              <a href="index.html" class="nav-item nav-link active">HOME</a>
+              <a href="index.html" class="nav-item nav-link">HOME</a>
               <a href="usuarioCad.html" class="nav-item nav-link">CADASTRE-SE</a>
-              <a href="request.jsp" class="nav-item nav-link">REQUESTS</a>
+              <a href="PedidoCreateAndFind" class="nav-item nav-link">REQUESTS</a>
               <a href="about.html" class="nav-item nav-link">O PROJETO</a>
               <a href="contact.html" class="nav-item nav-link">CONTATO</a>
-              <a href="listaUsuario.jsp" class="nav-item nav-link">CONSULTA DE CADASTROS</a>
+              <a href="listaUsuario.jsp" class="nav-item nav-link active">CONSULTA DE CADASTROS</a>
             </div>
             <a href="./login.html" class="btn btn-primary px-4">LOGIN</a>
           </div>
