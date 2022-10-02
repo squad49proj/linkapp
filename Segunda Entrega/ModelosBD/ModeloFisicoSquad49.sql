@@ -15,7 +15,7 @@ CREATE TABLE usuario (
     `cidade` varchar(50) not null,
 	`estado` varchar(30) not null,
     `cep` varchar(10) not null,
-    `tipo_usuario` varchar(50) not null
+    `tipoUsuario` varchar(50) not null
 );
 
 CREATE TABLE duvidas (

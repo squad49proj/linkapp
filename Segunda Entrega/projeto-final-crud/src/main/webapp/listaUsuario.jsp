@@ -36,11 +36,7 @@
               <a href="PedidoCreateAndFind" class="nav-item nav-link">REQUESTS</a>
               <a href="about.html" class="nav-item nav-link">O PROJETO</a>
               <a href="contact.html" class="nav-item nav-link">CONTATO</a>
-<<<<<<< HEAD
               <a href="listaUsuario.jsp" class="nav-item nav-link active">CONSULTA DE CADASTROS</a>
-=======
-              <a href="CreateAndFind" method = "GET" class="nav-item nav-link">CONSULTA DE CADASTROS</a>
->>>>>>> e964787e8d6e4d9ddad9a375d62bfb6b837566a8
             </div>
             <a href="./login.html" class="btn btn-primary px-4">LOGIN</a>		      
           </div>
