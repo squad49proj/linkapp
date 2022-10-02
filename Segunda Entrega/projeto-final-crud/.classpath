@@ -6,13 +6,13 @@
 			<attribute name="module" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/25525/Downloads/projeto1/Entrega individual - Modulo 4/java-proj-crud/jstl-1.2.jar">
+	<classpathentry kind="lib" path="C:/Users/reyna/Desktop/jstl-1.2.jar/jstl-1.2.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="lib" path="C:/Users/25525/Downloads/projeto1/Entrega individual - Modulo 4/java-proj-crud/mysql-connector-java-8.0.30.jar">
+	<classpathentry kind="lib" path="C:/Program Files (x86)/MySQL/Connector J 8.0/mysql-connector-java-8.0.30.jar">
 		<attributes>
 			<attribute name="module" value="true"/>
 			<attribute name="org.eclipse.jst.component.dependency" value="/WEB-INF/lib"/>

@@ -13,7 +13,7 @@ public class Usuario {
 	private String cidade;
 	private String estado;
 	private String cep;
-	private String tipousuario;
+	private String tipoUsuario;
 
 	public int getId() {
 		return id;
@@ -103,19 +103,19 @@ public class Usuario {
 		this.cep = cep;
 	}
 
-	public String getTipousuario() {
-		return tipousuario;
+	public String getTipoUsuario() {
+		return tipoUsuario;
 	}
 
-	public void setTipousuario(String tipousuario) {
-		this.tipousuario = tipousuario;
+	public void setTipoUsuario(String tipoUsuario) {
+		this.tipoUsuario = tipoUsuario;
 	}
 
 	@Override
 	public String toString() {
 		return "Usuario [id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", sexo=" + sexo + ", email=" + email
 				+ ", senha=" + senha + ", endereco=" + endereco + ", complemento=" + complemento + ", cidade=" + cidade
-				+ ", estado=" + estado + ", cep=" + cep + ", tipousuario=" + tipousuario + "]";
+				+ ", estado=" + estado + ", cep=" + cep + ", tipoUsuario=" + tipoUsuario + "]";
 	}
 
 }
