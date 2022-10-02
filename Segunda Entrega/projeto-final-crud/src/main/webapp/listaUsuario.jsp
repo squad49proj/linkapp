@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-  <%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c' %>
+  <%@ taglib uri='http://java.sun.com/jsp/jstl/core' prefix='c'%>
     <!DOCTYPE html>
     <html lang="pt-br">
 
@@ -36,13 +36,75 @@
               <a href="PedidoCreateAndFind" class="nav-item nav-link">REQUESTS</a>
               <a href="about.html" class="nav-item nav-link">O PROJETO</a>
               <a href="contact.html" class="nav-item nav-link">CONTATO</a>
+<<<<<<< HEAD
               <a href="listaUsuario.jsp" class="nav-item nav-link active">CONSULTA DE CADASTROS</a>
+=======
+              <a href="CreateAndFind" method = "GET" class="nav-item nav-link">CONSULTA DE CADASTROS</a>
+>>>>>>> e964787e8d6e4d9ddad9a375d62bfb6b837566a8
             </div>
-            <a href="./login.html" class="btn btn-primary px-4">LOGIN</a>
+            <a href="./login.html" class="btn btn-primary px-4">LOGIN</a>		      
           </div>
         </nav>
       </div>
       <!-- Navbar End -->
+      
+      <div class="container">
+		<div class="row">
+			<div class="cold-md-7">
+				<hr>
+				<h3> USÚARIOS CADASTRADOS</h3>
+				<br>
+				<!-- CAMPO DE BUSCA-->
+			    <form action ="CreateAndFind" method = "GET" class="d-flex" >
+			      <input name="pesquisa" class="form-control me-2" type="search" placeholder="Digite o nome ou CPF" aria-label="Search">
+			      <button class="btn btn-primary px-4" type="submit">Buscar</button>
+			    </form>
+				<hr>
+				
+				<table class="table">
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>Nome</th>
+							<th>CPF</th>
+							<th>Sexo</th>
+							<th>Email</th>
+							<th>Senha</th>
+							<th>Endereço</th>
+							<th>Complemento</th>
+							<th>Cidade</th>
+							<th>Estado</th>
+							<th>Cep</th>
+							<th>Tipo Usúario</th>
+							
+						</tr>
+					</thead>
+					<tbody>
+						<c:forEach items="${usuarios}" var="usuario">
+							<tr>
+								<td>${usuario.id}</td>
+								<td>${usuario.nome}</td>
+								<td>${usuario.cpf}</td>
+								<td>${usuario.sexo}</td>
+								<td>${usuario.email}</td>
+								<td>${usuario.senha}</td>
+								<td>${usuario.endereco}</td>
+								<td>${usuario.complemento}</td>
+								<td>${usuario.cidade}</td>
+								<td>${usuario.estado}</td>
+								<td>${usuario.cep}</td>
+								<td>${usuario.tipoUsuario}</td>						
+								<td>
+									<a href="UsuarioDestroy?usuarioId=${usuario.id}">Deletar</a>
+									<a href="UsuarioUpdate?usuarioId=${usuario.id}">Atualizar</a>
+								</td>
+							</tr>
+						</c:forEach>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
 
       
 

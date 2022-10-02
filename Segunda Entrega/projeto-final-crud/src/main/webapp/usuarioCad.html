@@ -37,7 +37,7 @@
           <a href="PedidoCreateAndFind" class="nav-item nav-link">REQUESTS</a>
           <a href="about.html" class="nav-item nav-link">O PROJETO</a>
           <a href="contact.html" class="nav-item nav-link">CONTATO</a>
-          <a href="listaUsuario.jsp" class="nav-item nav-link">CONSULTA DE CADASTROS</a>
+          <a href="CreateAndFind" class="nav-item nav-link">CONSULTA DE CADASTROS</a>
         </div>
         <a href="./login.html" class="btn btn-primary px-4">LOGIN</a>
       </div>
@@ -48,50 +48,60 @@
   <!-- Participe Start -->
   <main class="container-fluid p-5">
     <section>
-      <h2 id="titleForm">CADASTRO DE USÚARIO</h2>
+      <h2 id="titleForm">Cadastro de Usúario</h2>
       <div class="linha"></div>
       <form class="row g-3" action="CreateAndFind" method="POST">
+      
         <div class="col-md-12">
           <label for="inputNome" class="form-label">Nome</label>
           <input type="text" class="form-control" name="nome" id="inputNome" placeholder="Digite seu nome completo">
         </div>
+        
         <div class="col-md-6">
           <label for="cpf" class="form-label">CPF</label>
           <input type="text" maxlength="11" class="form-control" id="cpf" name="cpf" placeholder="Digite o CPF">
         </div>
+        
         <div class="col-md-6" id="selectionSexo">
           <label for="sexo" class="form-label">Qual o seu sexo?</label><br>
           <label for="masculino">Masculino</label>
-          <input type="radio" value="masculino">
+          <input name="sexo" type="radio" value="M">
           <label for="feminino">Feminino</label>
-          <input type="radio" value="feminino">
+          <input name="sexo" type="radio" value="F">
         </div>
+               
         <div class="col-md-6">
           <label for="inputEmail4" class="form-label">Email</label>
           <input type="email" name="email" class="form-control" id="inputEmail4" placeholder="@email">
         </div>
+        
         <div class="col-md-6">
           <label for="inputPassword" class="form-label">Senha</label>
           <input type="password" name="senha" class="form-control" id="inputPassword" placeholder="Cadastre uma senha">
         </div>
+        
         <div class="col-12">
           <label for="inputAddress" class="form-label">Endereço</label>
           <input type="text" name="endereco" class="form-control" id="inputAddress"
             placeholder="Rua, Avenida, Travessa...">
         </div>
+        
         <div class="col-12">
           <label for="inputAddress2" class="form-label">Complemento</label>
           <input type="text" name="complemento" class="form-control" id="inputAddress2"
             placeholder="Casa, Apartamento, bloco...">
         </div>
+        
         <div class="col-md-5">
           <label for="inputCity" class="form-label">Cidade</label>
           <input type="text" name="cidade" class="form-control" id="inputCity">
         </div>
+        
         <div class="col-md-4">
           <label for="inputCep" class="form-label">CEP</label>
           <input type="text" name="cep" class="form-control" id="inputCep">
         </div>
+        
         <div class="col-md-3" id="estado">
           <label for="inputEstado">Estado</label>
           <select id="inputEstado" class="form-select" name="estado">
@@ -124,15 +134,20 @@
             <option value="TO">TO</option>
           </select>
         </div>
+        
+        
+        
         <div class="mb-3">
           <select id="inputTipoUsuario" class="form-select" name="tipoUsuario">
             <option selected>Cadastre-se como...</option>
             <option value="doador">Doador</option>
             <option value="donatario">Donatário</option>
           </select>
+          
           <button type="submit" class="btn btn-primary mt-2" id="liveAlertBtn"
             style="background:#17a2b8;">Cadastrar</button>
           <button type="reset" class="btn btn-secondary mt-2">Limpar formulário</button>
+          
         </div>
       </form>
     </section>

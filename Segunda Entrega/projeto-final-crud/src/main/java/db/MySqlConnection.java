@@ -6,9 +6,9 @@ import java.sql.SQLException;
 
 public class MySqlConnection {
 
-	private static final String url = "jdbc:mysql://localhost:3306/crud_projeto_squad";
-	private static final String user = "root";
-	private static final String password = "12345";
+	private static final String URL = "jdbc:mysql://localhost:3306/crud_projeto_squad";/*crud_projeto_squad*/
+	private static final String USER = "root";
+	private static final String PASSWORD = "";
 
 	public static Connection createConnection() {
 
@@ -21,7 +21,7 @@ public class MySqlConnection {
 		}
 
 		try {
-			Connection connection = DriverManager.getConnection(url, user, password);
+			Connection connection = DriverManager.getConnection(URL, USER, PASSWORD);
 			System.out.println("Connected to database");
 			return connection;
 
