@@ -8,25 +8,24 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import dao.UsuarioDao;
+import dao.PedidoDao;
 
-@WebServlet("/UsuarioDestroy")
-public class UsuarioDelete extends HttpServlet {
+@WebServlet("/PedidoDelete")
+public class PedidoDelete extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	public UsuarioDelete() {
+	public PedidoDelete() {
 		super();
-
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
-		int usuarioId = Integer.parseInt(request.getParameter("usuarioId"));
-		UsuarioDao.delete(usuarioId);
+		int pedidoId = Integer.parseInt(request.getParameter("pedidoId"));
+		PedidoDao.delete(pedidoId);
 
-		UsuarioCreateAndFind usuarioCreateAndFind = new UsuarioCreateAndFind();
-		usuarioCreateAndFind.doGet(request, response);
+		PedidoCreateAndFind pedidoCreateAndFind = new PedidoCreateAndFind();
+		pedidoCreateAndFind.doGet(request, response);
 
 	}
 
