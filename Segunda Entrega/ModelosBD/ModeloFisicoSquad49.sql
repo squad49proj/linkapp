@@ -51,3 +51,5 @@ INSERT INTO `requests` VALUES (null, 'Felipe', 'Notebook', 'Olá, meu nome é Fe
 select * from requests;
 
 select * from usuario;
+
+select * from doacao;
