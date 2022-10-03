@@ -19,18 +19,18 @@ CREATE TABLE usuario (
 );
 
 CREATE TABLE duvidas (
-    assunto varchar(100),
-    mensagem varchar(2000),
-    nome varchar(50),
+    id int auto_increment PRIMARY KEY,
+	nome varchar(50),
     email varchar(50),
-    id_duvida int auto_increment PRIMARY KEY
+    assunto varchar(100),
+    mensagem varchar(2000)
 );
 
 CREATE TABLE requests (
     id int auto_increment PRIMARY KEY,
     nome varchar(50) not null,
     equip varchar(50) not null,
-    relato varchar(500) not null,
+    relato varchar(2000) not null,
     cpf varchar(11)
 );
 
@@ -44,7 +44,7 @@ CREATE TABLE doacao (
 ALTER TABLE requests ADD CONSTRAINT fk_cpf_1 FOREIGN KEY (cpf) REFERENCES usuario (cpf);
 
 INSERT INTO `usuario` VALUES (null, 'Rodrigo', '45544', 'masculino', 'rod@gmail', 'dwdadd', 'rua 7', 'casa 40', 'fortaleza', 'CE', '45546', 'Doador');
-INSERT INTO `usuario` VALUES (null, 'Jonas', '45568', 'masculino', 'rod@gmail', 'dwdadd', 'rua 7', 'casa 40', 'fortaleza', 'CE', '45546', 'Doador');
+
 INSERT INTO `requests` VALUES (null, 'Felipe', 'Notebook', 'Olá, meu nome é Felipe. Sou estudante de administração na UFC e preciso de um notebook para estudar.', '45544');
 
 
@@ -53,3 +53,5 @@ select * from requests;
 select * from usuario;
 
 select * from doacao;
+
+select * from duvidas;
