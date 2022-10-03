@@ -38,7 +38,7 @@ CREATE TABLE doacao (
     nome varchar(50),
     email varchar(50),
     quantia varchar(30),
-    id_doacao int auto_increment PRIMARY KEY
+    id int auto_increment PRIMARY KEY
 );
     
 ALTER TABLE requests ADD CONSTRAINT fk_cpf_1 FOREIGN KEY (cpf) REFERENCES usuario (cpf);
